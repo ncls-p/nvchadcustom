@@ -13,6 +13,17 @@ return {
     end,
   },
   {
+  "github/copilot.vim",
+  lazy = false,
+  config = function()  -- Mapping tab is already used by NvChad
+    vim.g.copilot_no_tab_map = true;
+    vim.g.copilot_assume_mapped = true;
+    vim.g.copilot_tab_fallback = "";
+  -- The mapping is set to other key, see custom/lua/mappings
+  -- or run <leader>ch to see copilot mapping section
+  end
+},
+  {
     "yetone/avante.nvim",
     event = "VeryLazy",
     version = false, -- Never set this value to "*"! Never!
@@ -55,12 +66,12 @@ return {
       },
       {
         -- Make sure to set this up properly if you have lazy=true
-        'MeanderingProgrammer/render-markdown.nvim',
+        "MeanderingProgrammer/render-markdown.nvim",
         opts = {
           file_types = { "markdown", "Avante" },
         },
         ft = { "markdown", "Avante" },
       },
     },
-  }
+  },
 }
