@@ -1,4 +1,16 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "pyright", "tsserver", "lua_ls", "clangd", "rust_analyzer", "ruff", "prettier" }
+local servers = {
+  "html",
+  "cssls",
+  "pyright",
+  "tsserver",
+  "lua_ls",
+  "clangd",
+  "rust_analyzer",
+  "marksman",
+  "ruff",
+  "prettier",
+  "markdownlint",
+}
 vim.lsp.enable(servers)
