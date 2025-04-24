@@ -21,6 +21,8 @@ return {
       vim.g.copilot_assume_mapped = true
       vim.g.copilot_tab_fallback = ""
       vim.g.copilot_enabled = true -- enable when loaded after LSP
+      -- Explicit setup call for better reliability
+      vim.cmd[[Copilot]]
     end
   },
   {
