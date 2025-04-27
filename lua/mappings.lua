@@ -17,4 +17,4 @@ local function toggle_copilot()
   vim.notify("Copilot " .. (vim.g.copilot_enabled and "enabled" or "disabled"))
 end
 
-map("n", "<leader>ct", toggle_copilot, { desc = "Toggle Copilot" })
+map("n", "<leader>ce", toggle_copilot, { desc = "Toggle Copilot" })
