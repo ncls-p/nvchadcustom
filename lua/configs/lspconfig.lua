@@ -3,6 +3,8 @@ require("nvchad.configs.lspconfig").defaults()
 local servers = {
   "html",
   "cssls",
+  "terraform-ls",
+  "helm-ls",
   "pyright",
   "tsserver",
   "lua_ls",
