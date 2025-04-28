@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 require("nvchad.configs.lspconfig").defaults()
 
 local servers = {

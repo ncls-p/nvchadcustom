@@ -7,18 +7,23 @@ This repository is intended to be used as a configuration for NvChad users. It l
 1. **Clone the Repository**: Clone this repository to your local machine using the following command:
    ```bash
    git clone https://github.com/ncls-p/nvchadcustom ~/.config/nvim
+   ```
 
 ## Directory Structure
 
-- **lua/configs/**: Contains configuration files for various plugins and features.
-  - `lspconfig.lua`: Configuration for LSP (Language Server Protocol).
-  - `conform.lua`: Configuration for code formatting.
-  - `lazy.lua`: Configuration for lazy loading plugins.
-- **lua/options.lua**: Contains general Neovim options and settings.
-- **lua/chadrc.lua**: Main configuration file for NvChad.
-- **lua/plugins/init.lua**: Initializes and configures plugins.
-- **lua/mappings.lua**: Contains key mappings for Neovim.
-- **copilot_state.lua**: Configuration for GitHub Copilot.
+- **lua/core/**: Core setup modules for Neovim initialization
+  - `bootstrap.lua`: bootstraps lazy.nvim, sets leader, loads plugins
+  - `theme.lua`: loads theme defaults and statusline
+  - `providers.lua`: enables and loads external providers
+- **lua/configs/**: Configuration files for various plugins and features
+  - `lspconfig.lua`: LSP configuration
+  - `conform.lua`: Code formatting configuration
+  - `lazy.lua`: Lazy loading plugin configuration
+- **lua/plugins/**: Individual plugin specifications split by functionality
+  - `conform.lua`, `lspconfig.lua`, `copilot.lua`, `copilot_lsp.lua`, `avante.lua`, `molten.lua`, `image.lua`
+- **lua/options.lua**: General Neovim options and settings
+- **lua/mappings.lua**: Key mappings for Neovim
+- **lua/chadrc.lua**: NvChad custom overrides and theme settings
 
 ## Usage
 
