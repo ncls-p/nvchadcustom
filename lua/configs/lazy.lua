@@ -34,7 +34,7 @@ return {
         "zip",
         "zipPlugin",
         "tutor",
-        "rplugin",
+        -- "rplugin", commented for molten
         "syntax",
         "synmenu",
         "optwin",
