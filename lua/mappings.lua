@@ -27,13 +27,9 @@ map("i", "<C-p>", function() return require("copilot#Previous")("") end,
 map("i", "<C-d>", function() return require("copilot#Dismiss")("") end,
   { expr = true, silent = true, desc = "Copilot Dismiss" })
 
--- Toggle Copilot.vim suggestions and load Copilot-LSP when enabled
+-- Toggle Copilot suggestions
 local function toggle_copilot()
   vim.g.copilot_enabled = not vim.g.copilot_enabled
-  if vim.g.copilot_enabled then
-    -- load copilot-lsp plugin dynamically
-    require("lazy").load({ plugins = { "copilotlsp-nvim/copilot-lsp" } })
-  end
   vim.notify("Copilot " .. (vim.g.copilot_enabled and "enabled" or "disabled"))
 end
 
