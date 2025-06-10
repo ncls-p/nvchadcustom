@@ -1,6 +1,9 @@
 -- Bootstrap lazy.nvim and load plugins
 require "core.bootstrap"
 
+-- Load LSP position encoding fixes
+require "core.lsp-fixes"
+
 -- Load theme
 require "core.theme"
 
