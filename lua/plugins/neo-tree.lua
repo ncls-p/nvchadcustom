@@ -71,15 +71,7 @@ return {
         mappings = {
           ["<space>"] = "none",
           ["<2-LeftMouse>"] = "open",
-          ["<cr>"] = function(state)
-            local node = state.tree:get_node()
-            if node.type == "file" then
-              require("utils.buffer-utils").cleanup_empty_buffers()
-              require("neo-tree.sources.filesystem.commands").open(state)
-            elseif node.type == "directory" then
-              require("neo-tree.sources.filesystem.commands").toggle_directory(state)
-            end
-          end,
+          ["<cr>"] = "open",
           ["o"] = "open",
           ["<esc>"] = "cancel",
           ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },

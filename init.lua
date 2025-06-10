@@ -17,4 +17,6 @@ require "nvchad.autocmds"
 -- Load mappings with schedule for better startup performance
 vim.schedule(function()
   require "mappings"
+  -- Apply tabufline fixes
+  require("configs.tabufline-fix").setup()
 end)
