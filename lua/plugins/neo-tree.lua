@@ -102,6 +102,19 @@ return {
           ["<"] = "prev_source",
           [">"] = "next_source",
           ["i"] = "show_file_details",
+          -- Add window navigation
+          ["<C-l>"] = function()
+            vim.cmd("wincmd l")
+          end,
+          ["<C-h>"] = function()
+            vim.cmd("wincmd h")
+          end,
+          ["<C-j>"] = function()
+            vim.cmd("wincmd j")
+          end,
+          ["<C-k>"] = function()
+            vim.cmd("wincmd k")
+          end,
         },
       },
       

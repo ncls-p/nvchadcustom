@@ -22,13 +22,14 @@ M.ui = {
     icons_left = true,
     lspkind_text = true,
     style = "default",
+    border_color = "grey_fg",
+    selected_item_bg = "colored",
   },
   
   telescope = { style = "borderless" },
   
   statusline = {
-    theme = "default",
-    separator_style = "arrow",
+    enabled = false,
   },
   
   tabufline = {
@@ -39,42 +40,7 @@ M.ui = {
 }
 
 M.nvdash = {
-  load_on_startup = true,
-  header = {
-    "                                                     ",
-    "  ███╗   ██╗ ██████╗██╗     ███████╗██████╗         ",
-    "  ████╗  ██║██╔════╝██║     ██╔════╝██╔══██╗        ",
-    "  ██╔██╗ ██║██║     ██║     ███████╗██████╔╝        ",
-    "  ██║╚██╗██║██║     ██║     ╚════██║██╔═══╝         ",
-    "  ██║ ╚████║╚██████╗███████╗███████║██║             ",
-    "  ╚═╝  ╚═══╝ ╚═════╝╚══════╝╚══════╝╚═╝             ",
-    "                                                     ",
-    "  ⚡ Lightning Fast Neovim Configuration ⚡          ",
-    "                                                     ",
-  },
-  
-  buttons = {
-    { txt = "  Find File", keys = "Spc f f", cmd = "Telescope find_files" },
-    { txt = "  Recent Files", keys = "Spc f o", cmd = "Telescope oldfiles" },
-    { txt = "󰈭  Find Word", keys = "Spc f w", cmd = "Telescope live_grep" },
-    { txt = "  Bookmarks", keys = "Spc m a", cmd = "Telescope marks" },
-    { txt = "  Themes", keys = "Spc t h", cmd = "Telescope themes" },
-    { txt = "  Mappings", keys = "Spc c h", cmd = "NvCheatsheet" },
-
-    { txt = "─", hl = "NvDashLazy", no_gap = true, rep = true },
-
-    {
-      txt = function()
-        local stats = require("lazy").stats()
-        local ms = math.floor(stats.startuptime * 100 + 0.5) / 100
-        return "  Loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms"
-      end,
-      hl = "NvDashLazy",
-      no_gap = true,
-    },
-
-    { txt = "─", hl = "NvDashLazy", no_gap = true, rep = true },
-  },
+  load_on_startup = false,
 }
 
 M.lsp = { signature = true }

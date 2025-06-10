@@ -13,6 +13,7 @@ require "core.providers"
 
 -- Load autocmds
 require "nvchad.autocmds"
+require "core.ui-autocmds"
 
 -- Load mappings with schedule for better startup performance
 vim.schedule(function()
