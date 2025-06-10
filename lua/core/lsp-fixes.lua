@@ -1,5 +1,13 @@
--- Fix for position_encoding warning
+-- Fix for position_encoding warning and deprecated APIs
 -- This patches vim.lsp.util.make_position_params to always include encoding
+-- and provides compatibility for deprecated functions
+
+-- Provide compatibility layer for deprecated vim.lsp.get_active_clients
+if not vim.lsp.get_active_clients and vim.lsp.get_clients then
+  vim.lsp.get_active_clients = vim.lsp.get_clients
+elseif vim.lsp.get_active_clients and not vim.lsp.get_clients then
+  vim.lsp.get_clients = vim.lsp.get_active_clients
+end
 
 local orig_make_position_params = vim.lsp.util.make_position_params
 
