@@ -1,10 +1,17 @@
----@diagnostic disable: undefined-global
+-- Bootstrap lazy.nvim and load plugins
 require "core.bootstrap"
+
+-- Load theme
 require "core.theme"
+
+-- Load options and providers
 require "options"
-require "nvchad.autocmds"
 require "core.providers"
 
+-- Load autocmds
+require "nvchad.autocmds"
+
+-- Load mappings with schedule for better startup performance
 vim.schedule(function()
   require "mappings"
 end)
